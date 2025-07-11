@@ -1,5 +1,25 @@
-﻿# Arduino build artifacts
+# Arduino build artifacts
 *.o
 *.elf
 *.hex
+*.map
+*.bin
 build/
+
+# Arduino project temp files
+*.log
+*.eep
+*.sym
+*.eep.hex
+*.ino.*
+
+# Wiring diagrams (regenerated)
+wiring/wiring-diagram.png
+wiring/wiring-diagram.md
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
