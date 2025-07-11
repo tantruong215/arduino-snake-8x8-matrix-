@@ -1,0 +1,5 @@
+﻿# Arduino build artifacts
+*.o
+*.elf
+*.hex
+build/
