@@ -1,0 +1,40 @@
+# Wiring Diagram for Arduino-Snake-8x8-Matrix
+
+Connect the components as follows:
+
+                              ┌───────────────┐
+                              │   Arduino     │
+                              │    Nano       │
+                              └───────────────┘
+                                  │    │    │
+                          +5V ─────┘    │    │
+                          GND ──────────┘    │
+                              A2 ─── Joystick X
+                              A3 ─── Joystick Y
+                              A5 ─── Potentiometer wiper
+                              D2 ─── Push-button input (with internal PULLUP)
+                              D10 ─ CLK  ─── LED-Matrix CLK pin
+                              D11 ─ CS   ─── LED-Matrix CS  pin
+                              D12 ─ DIN  ─── LED-Matrix DIN pin
+
+           ┌────────────────────────────────────────────────────┐
+           │                     Joystick                     │
+           │   VCC ─ +5V           A2 ─ X-axis                │
+           │   GND ─ GND           A3 ─ Y-axis                │
+           └────────────────────────────────────────────────────┘
+
+           ┌────────────────────────────────────────────────────┐
+           │                8×8 LED Matrix + MAX7219           │
+           │   VCC ─ +5V    GND ─ GND                         │
+           │   DIN ─ D12    CLK ─ D10     CS ─ D11             │
+           └────────────────────────────────────────────────────┘
+
+           ┌────────────────────────────────────────────────────┐
+           │               Potentiometer (10 kΩ)               │
+           │   +5V ─ VCC   GND ─ GND   A5 ─ Wiper               │
+           └────────────────────────────────────────────────────┘
+
+           ┌────────────────────────────────────────────────────┐
+           │                   Push-Button                     │
+           │   +5V ─ one leg   D2 ─ other leg (INPUT_PULLUP)   │
+           └────────────────────────────────────────────────────┘
