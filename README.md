@@ -45,6 +45,4 @@ arduino-snake-8x8-matrix/
 
 ---
 
-**Author:** Tan Truong
 
-*Changelog:* `chore: add project structure and README` (commit **8b08a73**)
